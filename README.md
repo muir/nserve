@@ -12,6 +12,10 @@ Install:
 
 ---
 
+Prior to [nject](https://github.com/muir/nject) version 0.2.0, this was part of that repo.
+
+---
+
 This package provides server startup and shutdown wrappers that can be used
 with libraries and servers that are use [nject](https://github.com/muir/nject).
 
