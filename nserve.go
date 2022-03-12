@@ -6,7 +6,7 @@ import (
 	"context"
 	"sync"
 
-	"github.com/muir/nject/nject"
+	"github.com/muir/nject"
 )
 
 // App provides hooks to start and stop libraries that are used by an app.  It

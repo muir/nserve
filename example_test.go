@@ -3,7 +3,7 @@ package nserve_test
 import (
 	"fmt"
 
-	"github.com/muir/nject/nserve"
+	"github.com/muir/nserve"
 	"github.com/pkg/errors"
 )
 
