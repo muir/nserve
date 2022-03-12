@@ -4,7 +4,6 @@
 ![unit tests](https://github.com/muir/nserve/actions/workflows/go.yml/badge.svg)
 [![report card](https://goreportcard.com/badge/github.com/muir/nserve)](https://goreportcard.com/report/github.com/muir/nserve)
 [![codecov](https://codecov.io/gh/muir/nserve/branch/main/graph/badge.svg)](https://codecov.io/gh/muir/nserve)
-[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fmuir%2Fnserve.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fmuir%2Fnserve?ref=badge_shield)
 
 Install:
 
