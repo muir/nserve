@@ -16,7 +16,70 @@ Prior to [nject](https://github.com/muir/nject) version 0.2.0, this was part of 
 ---
 
 This package provides server startup and shutdown wrappers that can be used
-with libraries and servers that are use [nject](https://github.com/muir/nject).
+with libraries and servers.  It is based up [nject](https://github.com/muir/nject).
+
+### Example
+
+On thing you might want to do with nserve is to use a `Hook` to trigger
+per-library database migrations using [libschema](https://github.com/muir/libschema).
+
+First create the hook:
+
+```go
+package myhooks
+
+import "github.com/nject/nserve"
+
+var MigrateMyDB = nserve.NewHook("migrate, nserve.Ascending)
+```
+
+In each library, have a create function:
+
+```go
+package users
+
+import(
+	"github.com/muir/libschema/lspostgres"
+	"github.com/muir/nject/nserve"
+)
+
+func NewUsersStore(app *nserve.App) *Store {
+	...
+	app.On(myhooks.MigrateMyDB, func(database *libschema.Database) {
+		database.Migrations("MyLibrary",
+			lspostgres.Script("create users", `
+				CREATE TABLE users (
+					id	bigint PRIMARY KEY,
+					name	text
+				)
+			`),
+		)
+	})
+	...
+	return &Store{}
+}
+```
+
+Then as part of server startup, invoke the migration hook:
+
+```go
+package main
+
+import(
+	"github.com/muir/libschema"
+	"github.com/muir/libschema/lspostgres"
+	"github.com/muir/nject"
+)
+
+func main() {
+	app, err := nserve.CreateApp("myApp", users.NewUserStore, ...)
+	schema := libschema.NewSchema(ctx, libschema.Options{})
+	sqlDB, err := sql.Open("postgres", "....")
+	database, err := lspostgres.New(logger, "main-db", schema, sqlDB)
+	myhooks.MigrateMyDB.Using(database)
+	err = app.Do(myhooks.MigrateMyDB)
+```
+
 
 ### How to structure your application
 
