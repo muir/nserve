@@ -1,16 +1,19 @@
 # nserve - server startup/shutdown in an nject world
 
-[![GoDoc](https://godoc.org/github.com/muir/nject/nserver?status.png)](http://godoc.org/github.com/muir/nject/nserve)
-[![Coverage](http://gocover.io/_badge/github.com/muir/nject/nserve)](https://gocover.io/github.com/muir/nject/nserve)
+[![GoDoc](https://godoc.org/github.com/muir/nserve?status.png)](https://pkg.go.dev/github.com/muir/nserve)
+![unit tests](https://github.com/muir/nserve/actions/workflows/go.yml/badge.svg)
+[![report card](https://goreportcard.com/badge/github.com/muir/nserve)](https://goreportcard.com/report/github.com/muir/nserve)
+[![codecov](https://codecov.io/gh/muir/nserve/branch/main/graph/badge.svg)](https://codecov.io/gh/muir/nserve)
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fmuir%2Fnserve.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fmuir%2Fnserve?ref=badge_shield)
 
 Install:
 
-	go get github.com/muir/nject
+	go get github.com/muir/nserve
 
 ---
 
 This package provides server startup and shutdown wrappers that can be used
-with libraries and servers that are stated with nject.
+with libraries and servers that are use [nject](https://github.com/muir/nject).
 
 ### How to structure your application
 
