@@ -6,8 +6,8 @@ github.com/kr/pretty v0.2.0/go.mod h1:ipq/a2n7PKx3OHsz4KJII5eveXtPO4qwEXGdVfWzfn
 github.com/kr/pty v1.1.1/go.mod h1:pFQYn66WHrOpPYNljwOMqo10TkYh1fy3cYio2l3bCsQ=
 github.com/kr/text v0.1.0 h1:45sCR5RtlFHMR4UwH9sdQ5TC8v0qDQCHnXt+kaKSTVE=
 github.com/kr/text v0.1.0/go.mod h1:4Jbv+DJW3UT/LiOwJeYQe1efqtUx/iVham/4vfdArNI=
-github.com/muir/nject v1.3.0 h1:ypmwKTgKYa8VAEfNysCt2gCd7CgALDBsxfqaYgUMPsQ=
-github.com/muir/nject v1.3.0/go.mod h1:ab6sXXg40/HOuC0hBr7LUGKbnwYuTjfk+6cgtpr3hKY=
+github.com/muir/nject v1.3.2 h1:BylY/uPmc2+BK+usd7vhCQAJXiLJ1eGpCPM/YP31ONE=
+github.com/muir/nject v1.3.2/go.mod h1:ab6sXXg40/HOuC0hBr7LUGKbnwYuTjfk+6cgtpr3hKY=
 github.com/muir/reflectutils v0.6.0 h1:jXfbW60Nx+STn78vwUWVCUwInXkqAC5kWS5oeY/xPgM=
 github.com/muir/reflectutils v0.6.0/go.mod h1:l8W7iTj6zMdmsWcPfsdnaAYLEuipJ7baVROqpfuonIc=
 github.com/pkg/errors v0.9.1 h1:FEBLx1zS214owpjy7qsBeixbURkuhQAwrK5UwLGTwt4=
