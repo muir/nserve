@@ -1,6 +1,6 @@
 module github.com/muir/nserve
 
-go 1.15
+go 1.23
 
 require (
 	github.com/muir/nject v1.9.1
